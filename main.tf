@@ -1,6 +1,6 @@
 resource "google_container_cluster" "gke-cluster" {
   name                     = "${var.name}"
-  region                   = "${var.zone}"
+  location                 = "${var.zone}"
   remove_default_node_pool = true
   initial_node_count       = 1
   min_master_version       = "${var.kube_version}"
