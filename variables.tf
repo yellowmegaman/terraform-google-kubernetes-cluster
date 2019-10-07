@@ -20,3 +20,8 @@ variable "client_cert" {
 	default     = "true"
 	description = "Issue client_certificate true/false"
 }
+
+variable "istio_disabled" {
+	default     = "true"
+	description = "GKE istio disable/enable. Set to 'false' to enable"
+}
