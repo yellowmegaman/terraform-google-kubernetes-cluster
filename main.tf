@@ -5,8 +5,10 @@ resource "google_container_cluster" "gke-cluster" {
   initial_node_count       = 1
   min_master_version       = var.kube_version
   enable_legacy_abac       = false
-  istio_config {
-    disabled = var.istio_disabled
+  addons_config {
+    istio_config {
+      disabled = var.istio_disabled
+    }
   }
   maintenance_policy {
     daily_maintenance_window {
